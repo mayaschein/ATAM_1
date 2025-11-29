@@ -1,1 +1,8 @@
-.section .datastring:	.byte 'a','A','u','g'	count:	.int 0	.section .textmovzbl count(%rip), %eaxmov $60, %raxxor %rdi, %rdisyscall
+.section .data
+str: .asciz "a"
+count: .int 0
+.section .text
+mov $60, %rax
+xor %rdi, %rdi	
+syscall
+
